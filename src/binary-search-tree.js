@@ -8,8 +8,8 @@ const { NotImplementedError } = require('../extensions/index.js');
 */
 
 
-class Node {
-  constructor(data/* , left = null, right = null */) {
+/* class Node {
+  constructor(data) {
 
    this.data = data;
 
@@ -21,8 +21,23 @@ class Node {
 module.exports = class BinarySearchTree {
   constructor() {
     this.roots = null;
-  }
+  } */
 
+  class Node {
+    constructor(data) {
+  
+     this.data = data;
+  
+     this.left = null;
+  
+     this.right = null;
+    }
+  }
+class BinarySearchTree {
+
+  constructor() {
+    this.roots = null;
+  }
   root ()  { 
    return this.roots;
   }
@@ -154,6 +169,9 @@ module.exports = class BinarySearchTree {
 
     return curr.data;
   }
+
+}
+
+module.exports = {
+  BinarySearchTree
 };
-
-
